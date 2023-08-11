@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>SmartContactManager</title>
+</head>
+<body>
+ <section>
+ 	  
+ 	  <div class="container">
+ 	   
+ 	   <div class="row">
+ 	    
+ 	    <div class="col-md-12">
+ 	     
+ 	     <div class="card">
+ 	      
+ 	      <div class="card-body">
+ 	      
+ 	       <h2 class="text-center">Change password</h2>
+ 	       
+ 	          
+ 	        <form action="#" th:action="@{/user/change-password}" method="post">
+ 	        
+ 	            <!-- old password field -->
+ 	          <div class="form-group mt-5">
+ 	              
+ 	              <input type="password" name="oldPassword" class="form-control" placeholder="Enter Old Password">
+ 	           
+ 	          </div>
+ 	          
+ 	          <!-- new password field -->
+ 	          <div class="form-group">
+ 	              
+ 	              <input type="password" name="newPassword" class="form-control" placeholder="Enter New Password">
+ 	          
+ 	          </div>
+ 	         
+ 	         <div class="container text-center">
+ 	            <button type="submit" class="btn btn-info">Change</button>
+ 	            <button type="reset" class="btn btn-secondary">Reset</button>
+ 	         </div>
+ 	         
+  	        </form>    
+ 	       
+ 	      </div>
+ 	     </div>   
+ 	    </div>
+ 	   </div>
+ 	  </div>
+ 	   	
+ 	  <script>
+ 	        $(document).ready(()=>{
+                $(".item").removeClass("active");
+				$("#setting-link").addClass("active");
+			});
+ 	  </script>
+ 	</section>
+</body>
+</html>

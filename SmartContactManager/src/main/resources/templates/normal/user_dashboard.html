@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>SmartContactManager</title>
+</head>
+<body>
+ <section>
+ 	  <div class="container">
+ 	  
+ 	      <div class="card">
+ 	      
+ 	      	<div class="card-body my-4 ">
+ 	      	
+ 	      	   <div class="container text-center">
+ 	      	                <!-- th:src="@{'/img/userHome3.png'}}" --> 
+ 	      	       <img  class="my_profile_picture" src="/img/userHome3.png"  style="height: 150px; width:150px;" alt="profile photo"/>
+ 	      	   </div>
+ 	      	   
+ 	      	  <h1 class="text-center mt-3 font-italic text-secondary">Start adding your contact To cloud...</h1>
+ 	      	       
+ 	      	       <a th:href="@{/user/add-contact}" class="btn btn-info mt-5 btn-block text-uppercase">Add New Contact</a>
+ 	      	       
+ 	      	  <p class="mt-4 font-italic">A contact manager is a software program that enables users to easily store and find contact information, such as names, addresses, and telephone numbers. They are contact-centric databases that provide a fully integrated approach to tracking all information and communication activities linked to contacts. Simple ones for personal use are included in most smartphones.</p>
+ 	      	
+ 	      	
+ 	      	<h2 class="my-2 text-center">Feel free to Donate us</h2>     	
+ 	      	<input id="payment_field" type="text" class="form-control my-2" placeholder="Enter amount here"/>
+ 	      	
+ 	      	<div class="container text-center">
+ 	      	   <button onclick="paymentStart()" class="btn btn-success">Pay</button>
+ 	      	</div>
+ 	      	
+ 	      	</div>
+ 	      </div>
+ 	  </div>	
+ 	  <script>
+ 	        $(document).ready(()=>{
+                $(".item").removeClass("active");
+				$("#home-link").addClass("active");
+			});
+ 	  </script>
+ 	</section>
+</body>
+</html>

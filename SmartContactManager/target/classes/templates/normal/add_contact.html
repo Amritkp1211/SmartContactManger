@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>SmartContactManager</title>
+</head>
+<body>
+ <section>
+       
+       <div class="card mt-1 mr-3 ml-3">
+          <div class="card-body">
+              <h1 class="text-center">Add contact</h1>   
+               
+               <div class="container-fluid mt-1">
+                 <div class="row">
+                   
+                   <div class="col-md-10 offset-md-1">
+                   
+                   <form  action="#"
+                         th:object="${contact}"
+                         th:action="@{/user/process-contact}"
+                         enctype="multipart/form-data"
+                         method="post"
+                         class="mt-2"
+                         
+                   >
+                   
+                   <!-- <first name> -->
+                   <div class="input-group">
+                    
+                      <div class="input-group-prepend">
+                        
+                         <div class="input-group-text">
+                         
+                              <i class="fas fa-user-alt"></i>
+                         
+                         
+                          </div>                      
+                    </div>
+                    
+                       <input required type="text" name="name" class="form-control" placeholder="Enter Name here" id="firstname" >
+                   
+                    </div>
+                    
+                     <!-- <nickname> -->
+                     
+                   <div class="input-group mt-3 ">
+                    
+                      <div class="input-group-prepend">
+                        
+                         <div class="input-group-text">
+                         
+                              <i class="fa-solid fa-signature"></i>
+                         
+                         
+                          </div>                      
+                    </div>
+                    
+                       <input required type="text" name="nickname" class="form-control" placeholder="Enter nickName here" id="nickname" >
+                   
+                    </div>
+                    
+                     
+                     <!-- Phone -->
+                     
+                   <div class="input-group mt-3 ">
+                    
+                      <div class="input-group-prepend">
+                        
+                         <div class="input-group-text">
+                         
+                             <i class="fa-solid fa-phone"></i>
+                         
+                         
+                          </div>                      
+                    </div>
+                    
+                       <input required  type="number" name="Phone" class="form-control" placeholder="Enter Phone here" id="Phone" >
+                   
+                    </div>
+                    
+                    <!-- Email-->
+                    
+                    <div class="input-group mt-3 ">
+                    
+                      <div class="input-group-prepend">
+                        
+                         <div class="input-group-text">
+                         
+                              <i class="fa-solid fa-envelope"></i>
+                         
+                         
+                          </div>                      
+                    </div>
+                    
+                       <input required type="email" name="email" class="form-control" placeholder="Enter email here" id="email" >
+                   
+                    </div>
+                    
+                      <!-- Work-->
+                    
+                    <div class="input-group mt-3 ">
+                    
+                      <div class="input-group-prepend">
+                        
+                         <div class="input-group-text">
+                         
+                              <i class="fa-solid fa-briefcase"></i>
+                         
+                         
+                          </div>                      
+                    </div>
+                    
+                       <input required type="text" name="work" class="form-control" placeholder="Enter work here" id="work" >
+                   
+                    </div>
+                    
+                      <!-- Discription -->
+                    
+                    <div class="form-group mt-3">
+                     
+                      <textarea required  name="description" placeholder="Enter your contact description" class="form-control" id="description" cols="30" rows="4"></textarea>
+                    </div>
+                     
+                     <!-- image -->
+                     
+                     <div class="custom-file"><i class="fa-solid fa-image"></i>
+                        <input type="file" name="customImage">
+                     </div>
+                     <!-- button save -->
+                     
+                     <div class="container text-center mt-1">
+                         <button  class="btn bg-primary text-white" >Save Contact</button>
+                     </div>
+                   </form>
+                   
+                   </div>
+                   
+                 </div>
+               </div>
+               
+          </div>
+       </div>
+           <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+              <script>
+                   tinymce.init({
+                     selector: '#mytextarea'
+                           });
+              </script> -->
+              <script>
+ 	        $(document).ready(()=>{
+                $(".item").removeClass("active");
+               $("#add-link").addClass("active");
+			});
+           
+ 	  </script>
+ 	</section>
+</body>
+</html>
